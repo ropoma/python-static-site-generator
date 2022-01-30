@@ -1,6 +1,7 @@
 import re
-from yaml import load, FullLoader
+
 from collections.abc import Mapping
+from yaml import load, FullLoader
 
 
 class Content(Mapping):
@@ -39,8 +40,8 @@ class Content(Mapping):
         return len(self.data)
 
     def __repr__(self):
-        data = dict()
-        for key, value in self.data.items:
+        data = {}
+        for key, value in self.data.items():
             if key != "content":
                 data[key] = value
         return str(data)
